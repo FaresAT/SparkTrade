@@ -1,10 +1,6 @@
 from flask import Flask
 app = Flask(__name__)
 
-@app.route("/api/python")
+@app.route("/api/python", methods=['GET'])
 def hello_world():
     return "<p>Hello, World!</p>"
-
-@app.route("/api/python/hello")
-def hello_mate():
-    return "<p>Hello mate</p>"
